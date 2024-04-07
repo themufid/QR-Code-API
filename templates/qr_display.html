@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Display</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+        .description {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your QR Code: 👇</h1>
+        <img src="data:image/png;base64,{{ qr_image }}" alt="QR Code">
+        <div class="description">
+            Scan QR code di atas atau klik tombol download untuk menyimpan.
+        </div>
+        <a href="data:image/png;base64,{{ qr_image }}" download="QRCode.png" class="download-btn">Download QR Code</a>
+    </div>
+    <div class="footer">
+        This QR Code API was made by Almufid
+    </div>
+</body>
+</html>
